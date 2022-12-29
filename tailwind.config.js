@@ -2,8 +2,8 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    fontFamily:{
-      primary: 'Roboto Mono, monospace'
+    fontFamily: {
+      primary: "Roboto Mono, monospace",
     },
     container: {
       padding: {
@@ -11,13 +11,13 @@ module.exports = {
         lg: "5rem",
       },
     },
-   
+
     extend: {
       colors: {
-        body: '#010208',
-        white: '#fff',
-        primary: '#6D28D9',
-        transparent: 'transparent',
+        body: "#010208",
+        secondary: "#150F21",
+        primary: "#6D28D9",
+        transparent: "transparent",
       },
     },
   },

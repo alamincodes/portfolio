@@ -1,9 +1,9 @@
 import React from "react";
 import myImage from "../assets/img/alamin.jpg";
-import CV from '../CV/AlaminResume.pdf';
+import CV from "../CV/AlaminResume.pdf";
 const About = () => {
   return (
-    <section className="min-h-[600px] relative lg:pt-48 pt-28">
+    <section className="min-h-[600px] relative lg:pt-48 pt-28" name='home'>
       <div className="container mx-auto">
         <div className="flex lg:flex-row flex-col-reverse lg:space-x-[200px] space-x-0 justify-center items-center">
           {/* text */}
@@ -19,7 +19,11 @@ const About = () => {
             {/* button */}
             <div className="flex items-center lg:justify-start justify-center">
               <button className="btn mr-5 font-semibold">Hire Me</button>
-              <a href={CV} download className="border-b-2 border-transparent hover:border-white">
+              <a
+                href={CV}
+                download
+                className="border-b-2 border-transparent hover:border-white"
+              >
                 Download CV
               </a>
             </div>

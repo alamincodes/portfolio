@@ -1,5 +1,6 @@
 import React from "react";
 import { HiMenuAlt3, HiOutlinePlus } from "react-icons/hi";
+import { Link } from "react-scroll";
 const Navbar = ({ isMenuShown, setIsMenuShown }) => {
   const links = [
     {
@@ -12,11 +13,11 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
     },
     {
       id: 3,
-      link: "Projects",
+      link: "projects",
     },
     {
       id: 4,
-      link: "Contact",
+      link: "contact",
     },
   ];
   return (
@@ -25,15 +26,22 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
         <div className="flex justify-between items-center container mx-auto h-full">
           {/* logo */}
           <div>
-            <h2 className="tracking-widest text-3xl font-bold">Alamincodes_</h2>
+            <h2 className="tracking-widest lg:text-3xl text-2xl font-bold">
+              Alamincodes<span className="text-primary">_</span>
+            </h2>
           </div>
           {/* text */}
           <div>
             <ul className="lg:flex hidden items-center space-x-12">
               {links.map(({ link, id }) => (
-                <li className="text-xl nav-link capitalize cursor-pointer" key={id}>
-                  {link}
-                </li>
+                <Link key={id} to={link} smooth duration={500}>
+                  <li
+                    className="text-xl nav-link capitalize cursor-pointer"
+                    
+                  >
+                    {link}
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>
@@ -57,7 +65,9 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
       >
         <ul className="space-y-5">
           {links.map(({ link, id }) => (
-            <li key={id}>{link}</li>
+            <li className="text-xl nav-link capitalize cursor-pointe" key={id}>
+              {link}
+            </li>
           ))}
         </ul>
       </div>
