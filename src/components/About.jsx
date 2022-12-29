@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-scroll";
+import { MdOutlineStickyNote2 } from "react-icons/md";
+
 import myImage from "../assets/img/alamin.jpg";
 import CV from "../CV/AlaminResume.pdf";
 const About = () => {
   return (
-    <section className="min-h-[600px] relative lg:pt-48 pt-28" name='home'>
+    <section className="min-h-[600px] relative lg:pt-48 pt-28" name="home">
       <div className="container mx-auto">
         <div className="flex lg:flex-row flex-col-reverse lg:space-x-[200px] space-x-0 justify-center items-center">
           {/* text */}
@@ -18,13 +21,12 @@ const About = () => {
             </p>
             {/* button */}
             <div className="flex items-center lg:justify-start justify-center">
-              <button className="btn mr-5 font-semibold">Hire Me</button>
-              <a
-                href={CV}
-                download
-                className="border-b-2 border-transparent hover:border-white"
-              >
-                Download CV
+              <Link to="contact" smooth duration={500}>
+                <button className="border-2 px-6 py-2 rounded-full border-primary mr-5 font-semibold">Hire Me</button>
+              </Link>
+              <a href={CV} download className="flex border-2 px-6 py-2 font-bold justify-center items-center rounded-full">
+                Resume
+                <MdOutlineStickyNote2 size={20} />
               </a>
             </div>
           </div>

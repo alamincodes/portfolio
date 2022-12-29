@@ -26,9 +26,10 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
         <div className="flex justify-between items-center container mx-auto h-full">
           {/* logo */}
           <div>
-            <h2 className="tracking-widest lg:text-3xl text-2xl font-bold">
+           <Link to="home" smooth duration={500}>
+           <h2 className="tracking-widest cursor-pointer lg:text-3xl text-2xl font-bold">
               Alamincodes<span className="text-primary">_</span>
-            </h2>
+            </h2></Link>
           </div>
           {/* text */}
           <div>
