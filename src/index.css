@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection{
+  background: rgb(113, 0, 128);
+  color: white;
+}
+
 @layer base {
   body {
     @apply font-primary bg-body text-white;

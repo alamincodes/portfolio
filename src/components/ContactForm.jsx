@@ -5,6 +5,7 @@ import { HiPhone } from "react-icons/hi";
 import { GrFacebookOption } from "react-icons/gr";
 import { FaLinkedin } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
+import { RiSendPlaneFill } from "react-icons/ri";
 const ContactForm = () => {
   return (
     <section className="my-[100px]" name="contact">
@@ -72,7 +73,7 @@ const ContactForm = () => {
               method="POST"
               className="flex flex-col"
             >
-              <div className="flex lg:flex-row flex-col gap-3">
+              <div className="flex lg:flex-row flex-col gap-0 lg:gap-3">
                 <input
                   type="Name"
                   name="name"
@@ -83,7 +84,7 @@ const ContactForm = () => {
                   type="email"
                   name="email"
                   placeholder="Your email"
-                  className="my-1  w-full bg-gradient-to-t from-[#341D38] to-[#271223] h-12 outline-none px-4 rounded-md"
+                  className="my-1 w-full bg-gradient-to-t from-[#341D38] to-[#271223] h-12 outline-none px-4 rounded-md"
                 />
               </div>
               <input
@@ -99,8 +100,9 @@ const ContactForm = () => {
                 placeholder="Message"
                 className="my-1 w-full bg-gradient-to-t from-[#341D38] to-[#271223] outline-none px-4 rounded-md"
               />
-              <button className="btn my-1 font-bold w-full">
+              <button className="btn my-1 text-xl font-bold w-full">
                 Send Message
+                <RiSendPlaneFill className="ml-2" />
               </button>
             </form>
           </div>

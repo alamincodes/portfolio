@@ -1,5 +1,5 @@
 import React from "react";
-import { HiMenuAlt3, HiOutlinePlus } from "react-icons/hi";
+import { HiMenuAlt4, HiOutlinePlus } from "react-icons/hi";
 import { Link } from "react-scroll";
 const Navbar = ({ isMenuShown, setIsMenuShown }) => {
   const links = [
@@ -35,10 +35,7 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
             <ul className="lg:flex hidden items-center space-x-12">
               {links.map(({ link, id }) => (
                 <Link key={id} to={link} smooth duration={500}>
-                  <li
-                    className="text-xl nav-link capitalize cursor-pointer"
-                    
-                  >
+                  <li className="text-xl nav-link capitalize cursor-pointer">
                     {link}
                   </li>
                 </Link>
@@ -52,7 +49,7 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
             {isMenuShown ? (
               <HiOutlinePlus className=" rotate-45" size={30} />
             ) : (
-              <HiMenuAlt3 size={30} />
+              <HiMenuAlt4 size={30} />
             )}
           </div>
         </div>
@@ -65,9 +62,17 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
       >
         <ul className="space-y-5">
           {links.map(({ link, id }) => (
-            <li className="text-xl nav-link capitalize cursor-pointe" key={id}>
-              {link}
-            </li>
+            <Link
+              onClick={() => setIsMenuShown(false)}
+              key={id}
+              to={link}
+              smooth
+              duration={500}
+            >
+              <li className="text-xl my-2 nav-link capitalize cursor-pointer">
+                {link}
+              </li>
+            </Link>
           ))}
         </ul>
       </div>
