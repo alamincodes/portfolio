@@ -5,8 +5,27 @@ import { HiPhone } from "react-icons/hi";
 import { GrFacebookOption } from "react-icons/gr";
 import { FaLinkedin } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
-import { RiSendPlaneFill } from "react-icons/ri";
+import { RiMailSendLine } from "react-icons/ri";
 const ContactForm = () => {
+  // const handleForm = (e) => {
+  //   e.preventDefault();
+  //   const name = e.target.name.value;
+  //   const email = e.target.email.value;
+  //   const message = e.target.message.value;
+  //   const contact = { name, email, message };
+  //   console.log(contact);
+  //   const url = `https://formsubmit.co/mdalamincodes@gmail.com`;
+  //   fetch(url, {
+  //     method: 'POST',
+  //     body:JSON.stringify(contact)
+  //   })
+  //   .then(res => res.json())
+  //   .then(data =>{
+  //     console.log('data success', data);
+  //   })
+
+  // };
+
   return (
     <section className="my-[100px]" name="contact">
       <div className="container mx-auto">
@@ -15,32 +34,40 @@ const ContactForm = () => {
         </h2>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
           {/* info */}
-          <div className="flex flex-col justify-center">
-            <a
-              className="flex items-center text-lg"
-              href="mailto:mdalamincodes@gmail.com"
-            >
-              <FiMail size={20} className="mr-2 text-[#26bdf8]" />
-              mdalamincodes@gmail.com
-            </a>
-            <a className="flex items-center text-lg" href="tel:+8801630328733">
-              <HiPhone size={20} className="mr-2 text-[#26bdf8]" />
-              01630328733
-            </a>
-            <a
-              className="flex items-center text-lg"
-              href="mailto:mdalamincodes@gmail.com"
-            >
-              <ImLocation size={20} className="mr-2 text-[#26bdf8]" />
-              Bangladesh
-            </a>
+          <div className="flex flex-col justify-center space-y-3">
+            <div className="flex flex-col items-start bg-slate-800/[0.7] p-4 rounded-xl">
+              <FiMail size={30} className="mr-2 text-pink-600 mb-1" />
+              <a
+                className="flex items-center text-lg text-white/75"
+                href="mailto:mdalamincodes@gmail.com"
+              >
+                mdalamincodes@gmail.com
+              </a>
+            </div>
+            <div className="flex flex-col items-start bg-slate-800/[0.7] p-4 rounded-xl">
+              <HiPhone size={30} className="mr-2 text-pink-600 mb-1" />
+
+              <a
+                className="flex items-center text-lg text-white/75"
+                href="tel:+8801630328733"
+              >
+                01630328733
+              </a>
+            </div>
+            <div className="flex flex-col items-start bg-slate-800/[0.7] p-4 rounded-xl">
+              <ImLocation size={30} className="mr-2 text-pink-600 mb-1" />
+              <h2 className="flex items-center text-lg text-white/75">
+                Bangladesh
+              </h2>
+            </div>
+
             {/* icons */}
-            <div className="my-7 flex gap-3">
+            <div className="my-4 flex gap-3 lg:justify-center justify-start px-4 md:px-0">
               <a
                 href="https://www.facebook.com/alamincodes/"
                 rel="noreferrer"
                 target="_blank"
-                className="p-2 border-[#36bdf8]  flex justify-center items-center border-2 rounded-full"
+                className="p-2 border-[#36bdf8] flex justify-center items-center border-2 rounded-full"
               >
                 {" "}
                 <GrFacebookOption className="text-[#36bdf8]" />
@@ -68,11 +95,7 @@ const ContactForm = () => {
 
           {/* contact */}
           <div>
-            <form
-              action="https://formsubmit.co/mdalamincodes@gmail.com"
-              method="POST"
-              className="flex flex-col"
-            >
+            <form method="POST" className="flex flex-col">
               <div className="flex lg:flex-row flex-col gap-0 lg:gap-3">
                 <input
                   type="Name"
@@ -96,13 +119,13 @@ const ContactForm = () => {
               <textarea
                 type="text"
                 name="message"
-                rows="10"
+                rows="7"
                 placeholder="Message"
                 className="my-1 w-full bg-gradient-to-t from-[#341D38] to-[#271223] outline-none px-4 rounded-md"
               />
-              <button className="btn my-1 text-xl font-bold w-full">
+              <button className="flex group justify-center items-center border-2 py-2 rounded-full my-3 text-xl font-bold w-full hover:border-primary">
                 Send Message
-                <RiSendPlaneFill className="ml-2" />
+                <RiMailSendLine className="ml-2 transform transition-transform group-hover:translate-x-2 group-hover:text-pink-600" />
               </button>
             </form>
           </div>
