@@ -35,25 +35,21 @@ const ContactForm = () => {
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
           {/* info */}
           <div className="flex flex-col justify-center space-y-3">
-            <div className="flex flex-col items-start bg-slate-800/[0.7] p-4 rounded-xl">
+            <a
+              href="mailto:mdalamincodes@gmail.com"
+              className="flex flex-col items-start bg-slate-800/[0.7] p-4 rounded-xl text-lg text-white/75"
+            >
               <FiMail size={30} className="mr-2 text-pink-600 mb-1" />
-              <a
-                className="flex items-center text-lg text-white/75"
-                href="mailto:mdalamincodes@gmail.com"
-              >
-                mdalamincodes@gmail.com
-              </a>
-            </div>
-            <div className="flex flex-col items-start bg-slate-800/[0.7] p-4 rounded-xl">
-              <HiPhone size={30} className="mr-2 text-pink-600 mb-1" />
+              mdalamincodes@gmail.com
+            </a>
 
-              <a
-                className="flex items-center text-lg text-white/75"
-                href="tel:+8801630328733"
-              >
-                01630328733
-              </a>
-            </div>
+            <a
+              href="tel:+8801630328733"
+              className="flex flex-col items-start bg-slate-800/[0.7] p-4 rounded-xl text-lg text-white/75"
+            >
+              <HiPhone size={30} className="mr-2 text-pink-600 mb-1" />
+              01630328733
+            </a>
             <div className="flex flex-col items-start bg-slate-800/[0.7] p-4 rounded-xl">
               <ImLocation size={30} className="mr-2 text-pink-600 mb-1" />
               <h2 className="flex items-center text-lg text-white/75">
@@ -67,28 +63,28 @@ const ContactForm = () => {
                 href="https://www.facebook.com/alamincodes/"
                 rel="noreferrer"
                 target="_blank"
-                className="p-2 border-[#36bdf8] flex justify-center items-center border-2 rounded-full"
+                className="p-2 border-[#36bdf8] group hover:bg-[#36bdf8] flex justify-center items-center border-2 rounded-full"
               >
                 {" "}
-                <GrFacebookOption className="text-[#36bdf8]" />
+                <GrFacebookOption className="text-[#36bdf8] group-hover:text-white" />
               </a>
               <a
                 href="https://github.com/alamincodes"
                 rel="noreferrer"
                 target="_blank"
-                className="p-2 border-[#36bdf8]  flex justify-center items-center border-2 rounded-full"
+                className="p-2 border-[#36bdf8] group hover:bg-[#36bdf8] flex justify-center items-center border-2 rounded-full"
               >
                 {" "}
-                <BsGithub className="text-[#36bdf8]" />
+                <BsGithub className="text-[#36bdf8] group-hover:text-white" />
               </a>
               <a
                 href="https://www.linkedin.com/in/alamincodes/"
                 rel="noreferrer"
                 target="_blank"
-                className="p-2 border-[#36bdf8]  flex justify-center items-center border-2 rounded-full"
+                className="p-2 border-[#36bdf8] group hover:bg-[#36bdf8] flex justify-center items-center border-2 rounded-full"
               >
                 {" "}
-                <FaLinkedin className="text-[#36bdf8]" />
+                <FaLinkedin className="text-[#36bdf8] group-hover:text-white" />
               </a>
             </div>
           </div>

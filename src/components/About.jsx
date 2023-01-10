@@ -19,10 +19,13 @@ const About = () => {
           </div>
           {/* text */}
           <div className="text-center lg:my-4 my-1">
-            <h2 className="lg:text-7xl text-2xl mb-6 font-bold bg-gradient-to-r from-[#cc00fff6] via-[#bb0cf0f6] to-pink-600 bg-clip-text text-transparent">
+            <h2 className="lg:text-7xl text-2xl mb-6 font-bold bg-gradient-to-r from-[#008be7f6] via-[#bb0cf0f6] to-pink-600 bg-clip-text text-transparent">
+              Alamincodes_
+            </h2>
+            <h2 className="lg:text-4xl text-2xl mb-6 font-bold text-indigo-300">
               <Typewriter
-                words={["Front-end Developer", "AlaminCodes_"]}
-                loop={2}
+                words={["Front-end Developer"]}
+                loop={5}
                 cursor
                 cursorStyle="_"
                 typeSpeed={90}
