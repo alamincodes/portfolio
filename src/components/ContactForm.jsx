@@ -91,7 +91,7 @@ const ContactForm = () => {
 
           {/* contact */}
           <div>
-            <form method="POST" className="flex flex-col">
+            <form method="POST" action="https://formsubmit.co/mdalamincodes@email.com" className="flex flex-col">
               <div className="flex lg:flex-row flex-col gap-0 lg:gap-3">
                 <input
                   type="Name"
